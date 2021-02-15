@@ -24,7 +24,7 @@ class DynamicTabView extends React.Component {
 
   componentDidMount() {
     //HACK
-    let wait = new Promise(resolve => setTimeout(resolve, 100));
+    let wait = new Promise(resolve => setTimeout(resolve, 500));
     wait.then(() => {
       this.flatView.scrollToIndex({ index: this.state.index, animated: false });
       this.headerRef.scrollHeader(this.state.index);
